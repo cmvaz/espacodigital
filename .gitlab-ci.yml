@@ -5,10 +5,10 @@ before_script:
 
 pages:
   script:
-  - mkdocs build
-  - mv site public
-artfacts:
-  paths:
-    - public
-only:
-  - master
+    - mkdocs build
+    - mv site public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
