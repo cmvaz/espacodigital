@@ -1,0 +1,14 @@
+image: python:3.8.13-buster
+
+before_script:
+  - pip install -r requirements.txt
+
+pages:
+  script:
+  - mkdocs build
+  - mv site public
+artfacts:
+  paths:
+    - public
+only:
+  - master
